@@ -1,0 +1,1914 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" href="#"><img height="80px" src="../../assets/images/logo.png" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            
+        </ul>
+        <div style="display:flex;justify-content:flex-end">
+            <div class="dropdown mr-5">
+                <button class="dropbtn">Bienvenue,ADMIN FIVE <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#">Dashboard</a>
+                    <a href="#">Mes demendes</a>
+                    <a href="#">Rediger une proposition</a>
+                    <a href="#">Evalution batiment</a>
+                    <a href="#">BLOG</a>
+                    <a href="#">Deconnexion</a>
+                </div>
+            </div> 
+            <div id="myNav" class="overlay">
+                <div class="overlay-content">
+                  <a href="#">About</a>
+                  <a href="#">Services</a>
+                  <a href="#">Clients</a>
+                  <a href="#">Contact</a>
+                </div>
+            </div>
+            <button (click)="fadeMenu()" class="btn" id="menu-toggle" data-toggle="collapse" data-target="#topnavbar" aria-controls="topnavbar" aria-expanded="false" style="background-color:#c4d500;
+            color: #3c3c3c;
+            text-transform: uppercase;
+            background-color: #c4d500;
+            height: 56px;
+            line-height: 56px;
+            display: inline-block;
+            font-size: 1.4rem;          
+            border-radius: 0rem;
+            padding: 0 24px 0 24px;
+            position: relative;
+            overflow: hidden;">&#9776; Menu</button>
+            <div *ngIf="menuOpen" class="hamburger-menu">
+                <div style="text-align: right;">
+                    <a (click)="fadeMenu()" class="fa fa-times fa-3x ml-2" style="color: white; margin: 20px; cursor: pointer;text-decoration:none"></a>
+                </div>                
+                <ul id="menu-main-menu" class="hamburger-menu-links">
+                  <span class="link">ACCUEIL</span> <br>
+                  <span class="link">NOTRE PACK</span> <br>
+                  <span class="link">A PROPOS DE FIVE</span> <br>
+                  <span class="link">COURTIERS</span> <br>
+                  <span class="link">CONTACT</span>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<br>
+<div class="container">
+    <ul class="nav nav-pills bg-theme mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item-arrow" role="presentation">
+            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
+                <div class="inner">
+                    <i class="fa fa-phone"></i> <br>
+                    Coordonees
+                </div>                
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
+                <div class="inner">
+                    <i class="fa fa-users"></i> <br>
+                    Famille
+                </div>                 
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
+                <div class="inner">
+                    <i class="fa fa-car"></i> <br>
+                    Automobile
+                </div>
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-incendie-tab" data-toggle="pill" href="#pills-incendie" role="tab" aria-controls="pills-incendie" aria-selected="false">
+                <div class="inner">
+                    <i class="fa fa-fire"></i> <br>
+                    Incendie
+                </div>                
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-responsiblite-tab" data-toggle="pill" href="#pills-responsiblite" role="tab" aria-controls="pills-responsiblite" aria-selected="false">
+                <div class="inner">
+                    <i class="fa fa-lock"></i> <br>
+                    Responsiblite
+                </div>
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-protection-tab" data-toggle="pill" href="#pills-protection" role="tab" aria-controls="pills-protection" aria-selected="false">
+                <div class="inner">
+                    <i class="fa fa-hourglass"></i> <br>
+                    Protection Juridique
+                </div>
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-Assistence-tab" data-toggle="pill" href="#pills-Assistence" role="tab" aria-controls="pills-Assistence" aria-selected="false">
+                <div class="inner">
+                    <i class="fa fa-support"></i> <br>
+                    Assistence
+                </div>
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-accident-tab" data-toggle="pill" href="#pills-accident" role="tab" aria-controls="pills-accident" aria-selected="false">
+                <div class="inner">
+                    <i class="fa fa-user"></i> <br>
+                    Accident
+                </div>
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="pills-Recapitulatif-tab" data-toggle="pill" href="#pills-Recapitulatif" role="tab" aria-controls="pills-Recapitulatif" aria-selected="false">
+                <div class="inner">
+                    <i class="fa fa-bars"></i> <br>
+                    Recapitulatif
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<br>
+<div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="container" style="background-color:rgb(240,240,240);padding:15px;">
+                        <ul class="listItem">
+                            <li class="listItemView" (click)="toinformation()">
+                                Information personnelles 
+                            </li>
+                            <hr>
+                            <li class="listItemView" (click)="toAdress()">
+                                Adresse
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="container" id="info" style="background-color:rgb(240,240,240);padding:15px;">
+                        <h3 class="text-center">Preneur</h3>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Nom *</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Mura">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Prenom *</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Chris">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Date de naissance *</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="01/01/2020">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Telephone *</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="0252856696">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Email *</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="info@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Mode de reglement</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Domiciliation">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">IBAN</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="BE01234567891234">
+                        </div>
+                    </div>
+                    <div class="container mt-5" style="background-color:rgb(240,240,240);padding:15px;">
+                        <h3 class="text-center">Assures</h3>
+                        <table class="table table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>Assures *</th>
+                                    <th>Nom *</th>
+                                    <th>Prenom *</th>
+                                    <th>Date de naissance *</th>
+                                    <th>Date de permis</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <select id="inputState" class="form-control">
+                                                <option selected>Autre</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-times"></i>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <button type="submit" class="btn btn-secondary" style="background-color:#6c757d;color:white;float:right;">+ Ajouter un membre</button>
+                        </table>
+                    </div>
+                    <div class="container mt-5" id="adress" style="background-color:#dddd;padding:15px;">
+                        <h3 class="text-center">Adress</h3>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Rue *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Numero *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Code Postal *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Ville *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="inputState">Pays *</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>Belgique</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-5">
+                        <button class="btn btn-lg" style="float:right;">Etape Suivante</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <div class="container">
+            <p>Familiale</p>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="container" style="background-color:rgb(240,240,240);">
+                        <ul class="listItem">
+                            <li class="listItemView" (click)="togeneral()">
+                                General
+                            </li>
+                            <hr>
+                            <li class="listItemView" (click)="toSinistres()">
+                                sinistres sur 5 ans
+                            </li>
+                            <hr>
+                            <li class="listItemView" (click)="toAssurer()">
+                                Assurer Precedent
+                            </li>
+                            <hr>
+                            <li class="listItemView" (click)="toAutres()">
+                                Autres Conducteurs
+                            </li>
+                            <hr>
+                            <li class="listItemView" (click)="toUtilisation()">
+                                Utilisation de Vehicule
+                            </li>
+                            <hr>
+                            <li class="listItemView" (click)="toVehicule()">
+                                Vehicule
+                            </li>
+                            <hr>
+                            <!--<li class="listItemView">
+                                Couverture
+                            </li>
+                            <hr>-->
+                            <li class="listItemView" (click)="togRomorques()">
+                                Romorques
+                            </li>
+                            <hr>
+                            <li class="listItemView" (click)="toFormule()">
+                                Formule choisie et Confirmation
+                            </li>
+                            <hr>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="container" style="background-color:#dddd;padding:15px;">
+                        <div class="row">
+                            <div class="col">
+                                <p class="text-center">Souscrire la Responsiblite Civile Familiale?</p>
+                            </div>
+                            <div class="col">
+                                <div class="btn-group btn-toggle"> 
+                                    <button class="btn btn-default">ON</button>
+                                    <button class="btn btn-primary active">OFF</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-4">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                              <a class="nav-link active">vehicule n 1 <i class="fa fa-times"></i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="container mt-4" id="general" style="background-color:#dddd;padding:15px;">
+                        <h3 class="text-center">General</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group ">
+                                    <label for="exampleInputEmail1">Le Conducteur principal est *</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>MAURA Chris</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Date de permis *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-5" id="assurer" style="background-color:#dddd;padding:15px;">
+                        <h3 class="text-center">Assure Precedent</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group ">
+                                    <label for="exampleInputEmail1">Compagine *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">N Police *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-5" id="sinistres" style="background-color:#dddd;padding:15px;">
+                        <h3 class="text-center">Sinistres sur 5 ans</h3>
+                        <table class="table table-responsive">
+                            <tbody>
+                                <tr>
+                                    <td>En droit * 
+                                        <div class="form-group">
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>En tort *</td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Sous influence de l'alcool ou de prodits stuprfiants</td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Le client a-t-il faint l'objet d'une resilition Compagine ou d'un retrait de permis au cours des 5 dernires annees?</td>
+                                    <td>
+                                        <div class="btn-group btn-toggle"> 
+                                            <button class="btn btn-default">ON</button>
+                                            <button class="btn btn-primary active">OFF</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Le client a-t-il faint l'objet d'une resilition Compagine ou d'un retrait de permis au cours des 5 dernires annees?</td>
+                                    <td>
+                                        <div class="btn-group btn-toggle"> 
+                                            <button class="btn btn-default">ON</button>
+                                            <button class="btn btn-primary active">OFF</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Commentaire</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Combine d'annees couvre l'attestation sinistre fournie par le client *</td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="container mt-5" id="autres" style="background-color:#dddd;padding:15px;">
+                        <h3 class="text-center">Les autres Conducteurs seront</h3>
+                        <table class="table table-responsive">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Assures</th>
+                                    <th>Nom</th>
+                                    <th>Prenom</th>
+                                    <th>Date de permis</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>Enfant</td>
+                                    <td>MURA</td>
+                                    <td>Sophe</td>
+                                    <td>14/12/2002</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="container mt-4" id="utilisation" style="background-color:#dddd;padding:15px;">
+                        <h3 class="text-center">Utilisation du vehicule</h3>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="button">A des fins professionanelles</label>
+                                <div class="btn-group btn-toggle"> 
+                                    <button class="btn btn-default">ON</button>
+                                    <button class="btn btn-primary active">OFF</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="button">Deductibilite TVA</label>
+                                <div class="btn-group btn-toggle"> 
+                                    <button class="btn btn-default">ON</button>
+                                    <button class="btn btn-primary active">OFF</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="button">Usage limite a monis de 10000 km/an</label>
+                                <div class="btn-group btn-toggle"> 
+                                    <button class="btn btn-default">ON</button>
+                                    <button class="btn btn-primary active">OFF</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Profession *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-5" id="vehicule" style="background-color:#dddd;padding:15px;">
+                        <h3 class="text-center">Vehicule</h3>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <label for="exampleInputEmail1">Le Conducteur principal est *</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>A-Automobile</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <label for="exampleInputEmail1">Nature de vehicule*</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>AA-Berlin</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Mise en circulation *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Marque *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Chassis *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="exampleFormControlSelect2 mb-5">Valeur assuree TVAC *</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text">$</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Modele *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">N de plaque *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="exampleFormControlSelect2 mb-5">creancier/leasing *</label>
+                                <div class="btn-group btn-toggle"> 
+                                    <button class="btn btn-default">ON</button>
+                                    <button class="btn btn-primary active">OFF</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="exampleFormControlSelect2 mb-5">Puissance *</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text">kw</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <label for="exampleInputEmail1">Nature de vehicule*</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>Essence</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">N de places *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="container mt-5" id="remorque" style="background-color:#dddd;padding:15px;">
+                        <h3 class="text-center">Remorque entre 750 kg et 3.500kg</h3>
+                        <table class="table table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>Nature *</th>
+                                    <th>Marque *</th>
+                                    <th>Identification *</th>
+                                    <th>Mise en circulation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <select id="inputState" class="form-control">
+                                            <option selected>Selectionner un type de remo</option>
+                                            <option>...</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <button class="btn btn-secondary" style="float:right;background-color:#6c757d;color:white;"> + Ajouter une remorque ou une caravane</button>
+                        </table>
+                    </div>
+                    <div class="container mt-5" style="background-color:#dddd;padding:15px;">
+                        <button type="submit" class="btn btn-secondary" style="float:right;background-color:#6c757d;color:white;"><i class="fa fa-calendar"></i> Recalander le montant de la prime</button>
+                        <table class="table table-striped table-responsive-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">RC</th>
+                                    <th scope="col">MINI-Omnium premium</th>
+                                    <th scope="col">MINI-Omnium SERENITE</th>
+                                    <th scope="col">Omnium premium</th>
+                                    <th scope="col">Omnium SERENITE</th>
+                                    <th scope="col">Omnium Previlege</th>
+                                </tr>
+                            </thead>
+                            <tbody >
+                                <tr>
+                                    <td scope="row"></td>
+                                    <td>52,16</td>
+                                    <td>67,88</td>
+                                    <td>89,14</td>
+                                    <td>90,14</td>
+                                    <td>89,14</td>
+                                    <td>89,14</td>
+                                </tr>
+                                <tr>
+                                    <td>Rc</td>
+                                    <td><i class="fa fa-check"></i></td>
+                                    <td><i class="fa fa-check"></i></td>
+                                    <td><i class="fa fa-check"></i></td>
+                                    <td><i class="fa fa-check"></i></td>
+                                    <td><i class="fa fa-check"></i></td>
+                                    <td><i class="fa fa-check"></i></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><button class="btn btn-secondary" style="background-color:#6c757d;color:white;">Choisir</button></td>
+                                    <td><button class="btn btn-secondary" style="background-color:#6c757d;color:white;">Choisir</button></td>
+                                    <td><button class="btn btn-secondary" style="background-color:#6c757d;color:white;">Choisir</button></td>
+                                    <td><button class="btn btn-secondary" style="background-color:#6c757d;color:white;">Choisir</button></td>
+                                    <td><button class="btn btn-secondary" style="background-color:#6c757d;color:white;">Choisir</button></td>
+                                    <td><button class="btn btn-secondary" style="background-color:#6c757d;color:white;">Choisir</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="container mt-5">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="container" id="formule" style="background-color:#dddd;padding:15px;">
+                                    <h3 class="text-center">Formule choisie</h3>
+                                    <table class="table table-responsive-sm">
+                                        <tbody>
+                                            <tr>
+                                                <td>Formule choisie</td>
+                                                <td>Mini-Omnium SERENITE</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Prime</td>
+                                                <td>50,03</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Honoraries</td>
+                                                <td>0,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total mensuel</td>
+                                                <td>50,03</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <a>Voir les conditions generales</a>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="container" style="background-color:#dddd;padding:15px;">
+                                    <h3 class="text-center">Confirmation</h3>
+                                    <p><b>Je confirme que l'objet de risque, l'assure et l'usage du risque sont conforms aux conditions d'acceptations</b></p>
+                                    <div class="btn-group btn-toggle"> 
+                                        <button class="btn btn-default">ON</button>
+                                        <button class="btn btn-primary active">Non</button>
+                                    </div>
+                                    <p><b>Souhaitez-vous une date d'effet diffrent pour la RC?</b></p>
+                                    <div class="btn-group btn-toggle"> 
+                                        <button class="btn btn-default">ON</button>
+                                        <button class="btn btn-primary active">Non</button>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="exampleInputEmail1">Date d'effet *</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="buttons mt-4" style="float:right;">
+                            <button class="btn btn-secondary" style="background-color: #6c757d;color:white;">Etape precedente</button><button class="btn btn-secondary ml-2" style="background-color: #6c757d;color:white;">+ Ajouter un autre bien</button><button class="btn btn-lg ml-2 mt-2">Etape Suivante</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="pills-incendie" role="tabpanel" aria-labelledby="pills-incendie-tab">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="container" style="background-color:rgb(240,240,240);">
+                        <ul class="listItem">
+                            <li class="listItemView" (click)="toAdresse()">
+                                Adresse du bien
+                            </li>
+                            <hr>
+                            <li class="listItemView" (click)="toOccupation()">
+                                Occupation du bien
+                            </li>
+                            <hr>
+                            <li class="listItemView" (click)="toDescription()">
+                                Description du bien
+                            </li>
+                            <hr>
+                            <li class="listItemView" (click)="toCreancier()">
+                                creancier hypothecaire
+                            </li>
+                            <hr>
+                            <li class="listItemView" (click)="toContenu()">
+                                Contenu
+                            </li>
+                            <hr>
+                            <li class="listItemView" (click)="toAssureur1()">
+                                Assureur precedent
+                            </li>
+                            <hr>
+                            <li class="listItemView" (click)="toCouverture()">
+                                Couverture
+                            </li>
+                            <hr>
+                            <li class="listItemView" (click)="toFormules()">
+                                Formules
+                            </li>
+                            <hr>
+                            <li class="listItemView" (click)="toChoisie()">
+                                Formule choisie et Confirmation
+                            </li>
+                            <hr>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="container mt-5" style="background-color:#dddd;padding:15px;">
+                        <div class="row">
+                            <div class="col">
+                                <p class="text-center">Souscrire la Responsiblite Civile Familiale?</p>
+                            </div>
+                            <div class="col">
+                                <div class="btn-group btn-toggle"> 
+                                    <button class="btn btn-default">ON</button>
+                                    <button class="btn btn-primary active">OFF</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-5">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                              <a class="nav-link active" href="#">Bien n 1</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="container mt-5" id="adresse" style="background-color:#dddd;padding:15px;">
+                        <h3 class="text-center">Adresse</h3>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Rue *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Numero *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Code Postal *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Ville *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="inputState">Pays *</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>Belgique</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-5" id="occupation" style="background-color:#dddd;padding:15px;">
+                        <h3 class="text-center">Occupation du bien *</h3>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                <select id="inputState" class="form-control">
+                                    <option selected>Proprietaire Occupant</option>
+                                    <option>...</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                <select id="inputState" class="form-control">
+                                    <option selected>Occupation permanent</option>
+                                    <option>...</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                <select id="inputState" class="form-control">
+                                    <option selected>Destination Resdentielle unique</option>
+                                    <option>...</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <p class="text-center">L'activite professionanelle fait-elle partie de la liste des activites exclues?</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="btn-group btn-toggle"> 
+                                    <button class="btn btn-default">ON</button>
+                                    <button class="btn btn-primary active">OFF</button>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Commentaire</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-5" id="description" style="background-color:#dddd;padding:15px;">
+                        <h3 class="text-center">Description de bien</h3>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p><b>Les materiaux de construction sont-ils conforms aux regles de Souscrire</b></p>
+                                <div class="btn-group btn-toggle"> 
+                                    <button class="btn btn-default">Oui</button>
+                                    <button class="btn btn-primary active">Non</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect2">Type de bien</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>Multi-logement</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="exampleFormControlSelect2 mb-5">Bien contigu</label>
+                                <div class="btn-group btn-toggle"> 
+                                    <button class="btn btn-default">ON</button>
+                                    <button class="btn btn-primary active">Non</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="exampleFormControlSelect2 mb-5">Batiment en zone inondable</label>
+                                <div class="btn-group btn-toggle"> 
+                                    <button class="btn btn-default">ON</button>
+                                    <button class="btn btn-primary active">Non</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="exampleFormControlSelect2 mb-5">Bien isole a plus de 50m</label>
+                                <div class="btn-group btn-toggle"> 
+                                    <button class="btn btn-default">ON</button>
+                                    <button class="btn btn-primary active">Non</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <label for="exampleFormControlSelect2 mb-5">Capital batiment assure en valeur d'expertise</label>
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text">$</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-5" id="creancier" style="background-color:#dddd;padding:15px;">
+                        <h3 class="text-center">creancier hypothecaire</h3>
+                        <h4 class="text-center">Le bien fait-il l'objet d'une creance hypothecaire</h4>
+                        <div class="btn-group btn-toggle"> 
+                            <button class="btn btn-default">ON</button>
+                            <button class="btn btn-primary active">Non</button>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Date de debut *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Date de fin</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Nom creancier</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Emprunteur *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">N dossier credit *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Rue *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Numero *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Code Postal *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Ville *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="inputState">Pays *</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>Belgique</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-5" id="contenu" style="background-color:#dddd;padding:15px;">
+                        <h3 class="text-center">Contenu</h3>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <label for="exampleFormControlSelect2 mb-5">Le client evalue son contenu a *</label>
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text">$</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-8">
+                            <label for="exampleFormControlSelect2 mb-5">Alarme fonctionnelle *</label>
+                            <div class="btn-group btn-toggle"> 
+                                <button class="btn btn-default">ON</button>
+                                <button class="btn btn-primary active">Non</button>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="container mt-5" id="assure1" style="background-color:#dddd;padding:15px;">
+                        <h3 class="text-center">Assure Precedent</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group ">
+                                    <label for="exampleInputEmail1">Compagine *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">N Police *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="container mt-5" class="antecedents" style="background-color:#dddd;padding:15px;">
+                        <h3 class="text-center">Antecedents sinistre</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group ">
+                                    <label for="exampleInputEmail1">Combine de sinistre le risque a assurer a-t-il subi au cours des 5 dernires annees? *</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group ">
+                                    <label for="exampleInputEmail1">Le risque a-t-il fait l'objet d'une resilition Compagine au cours des 5 dernires annes*</label>
+                                    <div class="btn-group btn-toggle"> 
+                                        <button class="btn btn-default">ON</button>
+                                        <button class="btn btn-primary active">Non</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <label for="exampleFormControlSelect2 mb-5">Montant indemnise*</label>
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text">$</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Commentaire</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-5" id="couverture" style="background-color:#dddd;padding:15px;">
+                        <h3 class="text-center">Couverture</h3>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>Batiment</td>
+                                    <td>
+                                        <div class="btn-group btn-toggle"> 
+                                            <button class="btn btn-default">ON</button>
+                                            <button class="btn btn-primary active">Non</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Contenu</td>
+                                    <td>
+                                        <div class="btn-group btn-toggle"> 
+                                            <button class="btn btn-default">ON</button>
+                                            <button class="btn btn-primary active">Non</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Vol</td>
+                                    <td>
+                                        <div class="btn-group btn-toggle"> 
+                                            <button class="btn btn-default">ON</button>
+                                            <button class="btn btn-primary active">Non</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Pertes indirects</td>
+                                    <td>
+                                        <div class="btn-group btn-toggle"> 
+                                            <button class="btn btn-default">ON</button>
+                                            <button class="btn btn-primary active">Non</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Vehicule au repos</td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input class="form-control" id="exampleFormControlTextarea1" type="text">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Avec abandon de recours</td>
+                                    <td>
+                                        <div class="btn-group btn-toggle"> 
+                                            <button class="btn btn-default">ON</button>
+                                            <button class="btn btn-primary active">Non</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="container mt-5" style="background-color:#dddd;padding:15px;">
+                        <button type="submit" class="btn btn-secondary" style="float:right;background-color:#6c757d;color:white;"><i class="fa fa-calendar"></i> Recalander le montant de la prime</button>
+                        <table class="table table-striped table-responsive-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">PREMIUM</th>
+                                    <th scope="col">SERNITE</th>
+                                    <th scope="col">PRIVILEGE</th>
+                                </tr>
+                            </thead>
+                            <tbody >
+                                <tr>
+                                    <td scope="row"></td>
+                                    <td>47,62</td>
+                                    <td>57,17</td>
+                                    <td>50,93</td>
+                                </tr>
+                                <tr>
+                                    <td>Incendie</td>
+                                    <td><i class="fa fa-check"></i></td>
+                                    <td><i class="fa fa-check"></i></td>
+                                    <td><i class="fa fa-check"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="container" id="choisie" style="background-color:#dddd;padding:15px;">
+                                <h3 class="text-center">Formule choisie</h3>
+                                <table class="table table-responsive-sm">
+                                    <tbody>
+                                        <tr>
+                                            <td>Formule choisie</td>
+                                            <td>PRIVILEGE</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Prime</td>
+                                            <td>50,03</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Honoraries</td>
+                                            <td>0,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total mensuel</td>
+                                            <td>50,03</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a>Voir les conditions generales</a>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="container" style="background-color:#dddd;padding:15px;">
+                                <h3 class="text-center">Confirmation</h3>
+                                <p><b>Je confirme que l'objet de risque, l'assure et l'usage du risque sont conforms aux conditions d'acceptations</b></p>
+                                <div class="btn-group btn-toggle"> 
+                                    <button class="btn btn-default">ON</button>
+                                    <button class="btn btn-primary active">Non</button>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="exampleInputEmail1">Date d'effet *</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons mt-4" style="float: right;;">
+                        <button class="btn btn-secondary" style="background-color: #6c757d;color:white;">Etape precedente</button><button class="btn btn-secondary ml-2" style="background-color: #6c757d;color:white;">+ Ajouter un autre bien</button><button class="btn btn-lg ml-2 mt-2">Etape Suivante</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="pills-responsiblite" role="tabpanel" aria-labelledby="pills-responsiblite-tab">
+        <div class="container" style="background-color: #dddd;border:1px solid #ddd;padding:15px;">
+            <div class="row">
+                <div class="col">
+                    <p class="text-center">Souscrire la Responsiblite Civile Familiale></p>
+                </div>
+                <div class="col">
+                    <div class="btn-group btn-toggle"> 
+                        <button class="btn btn-default">ON</button>
+                        <button class="btn btn-primary active">OFF</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5" style="background-color: #dddd;border:1px solid #ddd;padding:15px;">
+            <h4 class="text-center">Assureur precedent</h4>
+            <form>
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Compagine</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">N Police</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="container mt-5" >
+            <div class="row">
+                <div class="col-md-4" style="background-color:#dddd;border:1px solid #ddd;padding:15px;">
+                    <h4 class="text-center">Detail du tarif mensule</h4>
+                    <table class="table table-responsive">
+                        <thead>
+                            <tr></tr>
+                            <tr></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Prime</td>
+                                <td>143.84</td>
+                            </tr>
+                            <tr>
+                                <td>Honoraries</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Total measuel</td>
+                                <td>143.84</td>
+                            </tr>
+                        </tbody>
+                        <a style="float:right;">Voir les conditions generales</a>
+                    </table>
+                </div>
+                <div class="col-md-8 mt-3" style="background-color:#dddd;border:1px solid #ddd;padding:15px; height:200px;">
+                    <h4 class="text-center">Confirmation</h4>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Date d'effet</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-2">
+            <div class="buttons" style="float: right;">
+                <button type="submit" class="btn btn-secondary mr-5" style="background-color: #6c757d;color:white;">Etape precedent</button><button type="submit" class="btn">Etape Suivante</button>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="pills-protection" role="tabpanel" aria-labelledby="pills-protection-tab">
+        <div class="container" style="background-color: #dddd;border:1px solid #ddd;padding:15px;">
+            <div class="row">
+                <div class="col">
+                    <p class="text-center">Souscrire la Responsiblite Civile Familiale></p>
+                </div>
+                <div class="col">
+                    <div class="btn-group btn-toggle"> 
+                        <button class="btn btn-default">ON</button>
+                        <button class="btn btn-primary active">OFF</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5" style="background-color: #dddd;border:1px solid #ddd;padding:15px;">
+            <h4 class="text-center">Assureur precedent</h4>
+            <form>
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Compagine</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">N Police</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="container mt-5" style="background-color: #dddd;border:1px solid rgb(240, 240,240);padding:20px;height: 250px;">
+            <h4 class="text-center">Vehicules a couvrir</h4>
+            <table class="table">
+                <thead>
+                    <tr >
+                        <td scope="col">Marque *</td>
+                        <td scope="col">Modele *</td>
+                        <td scope="col">Immatriculation *</td>
+                        <td scope="col">Date effet *</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row" >RENAULT</td>
+                        <td>CAPTURE</td>
+                        <td>1ESC568</td>
+                        <td>29/12/2020</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="Submit" class="btn btn-secondary" style="background-color: #6c757d;color:white;float:right;">+ Ajouter un autre Vehicule</button>
+        </div>
+        <div class="container mt-5" style="background-color: #dddd;border:1px solid rgb(240, 240,240);padding:20px;height:300px;">
+            <h4 class="text-center">Vehicules a couvrir</h4>
+            <table class="table table-striped table-responsive-sm">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col" >AUTO</th>
+                        <th scope="col">PREMIUM</th>
+                        <th scope="col">SERNITE</th>
+                        <th scope="col">PRIVILEGE</th>
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr>
+                        <td scope="row"></td>
+                        <td>6,30</td>
+                        <td>8,65</td>
+                        <td>10,93</td>
+                        <td>16,10</td>
+                    </tr>
+                    <tr>
+                        <td>Votre Sante</td>
+                        <td><i class="fa fa-times"></i></td>
+                        <td><i class="fa fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="Submit" class="btn btn-secondary" style="background-color: #6c757d;color:white;float:right;">+ Ajouter un autre Vehicule</button>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="container" style="background-color: #dddd;border:1px solid rgb(240, 240,240);padding:20px;">
+                        <h4 class="text-center">Formule choisie</h4>
+                        <table class="table table-striped table-responsive-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col" ></th>
+                                </tr>
+                            </thead>
+                            <tbody >
+                                <tr>
+                                    <td scope="row">Fomule choisie</td>
+                                    <td>SERENITE</td>
+                                </tr>
+                                <tr>
+                                    <td>PRIME</td>
+                                    <td>7,81</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="container" style="background-color: #dddd;border:1px solid rgb(240, 240,240);padding:20px;">
+                        <h4 class="text-center">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Date d'effet</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+                            </div>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons" style="float: right;">
+                <button type="submit" class="btn btn-secondary mr-3" style="background-color: #6c757d;">Etape precedente</button>
+                <button type="submit" class="btn btn-lg">Etape suivante</button>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="pills-Assistence" role="tabpanel" aria-labelledby="pills-Assistence-tab">
+        <div class="container" style="background-color:#dddd;padding:15px;">
+            <div class="row">
+                <div class="col">
+                    <p class="text-center">Souscrire la Responsiblite Civile Familiale?</p>
+                </div>
+                <div class="col">
+                    <div class="btn-group btn-toggle"> 
+                        <button class="btn btn-default">ON</button>
+                        <button class="btn btn-primary active">OFF</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5" style="background-color:#dddd;padding:15px;">
+            <h3 class="text-center">Assure Precedent</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group ">
+                        <label for="exampleInputEmail1">Compagine *</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">N Police *</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5" style="background-color: #dddd;border:1px solid rgb(240, 240,240);padding:20px;height: 250px;">
+            <h4 class="text-center">Vehicules a couvrir</h4>
+            <table class="table">
+                <thead>
+                    <tr >
+                        <td scope="col">Marque *</td>
+                        <td scope="col">Modele *</td>
+                        <td scope="col">Immatriculation *</td>
+                        <td scope="col">Date effet *</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row" >RENAULT</td>
+                        <td>CAPTURE</td>
+                        <td>1ESC568</td>
+                        <td>29/12/2020</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="Submit" class="btn btn-secondary" style="background-color: #6c757d;color:white;float:right;">+ Ajouter un autre Vehicule</button>
+        </div>
+        <div class="container mt-5" style="background-color:#dddd;padding:15px;">
+            <table class="table table-striped table-responsive-sm">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Auto</th>
+                        <th scope="col">PREMIUM</th>
+                        <th scope="col">SERNITE</th>
+                        <th scope="col">PRIVILEGE</th>
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr>
+                        <td scope="row"></td>
+                        <td>8,25</td>
+                        <td>10,45</td>
+                        <td>14,85</td>
+                        <td>28,60</td>
+                    </tr>
+                    <tr>
+                        <td>Incendie</td>
+                        <td><i class="fa fa-times"></i></td>
+                        <td><i class="fa fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container">
+            <h3 class="text-center">Formule choisie</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="container" style="background-color:#dddd;padding:15px;">
+                        <table class="table table-responsive-sm">
+                            <tbody>
+                                <tr>
+                                    <td>Formule choisie</td>
+                                    <td>Mini-Omnium SERENITE</td>
+                                </tr>
+                                <tr>
+                                    <td>Prime</td>
+                                    <td>50,03</td>
+                                </tr>
+                                <tr>
+                                    <td>Honoraries</td>
+                                    <td>0,00</td>
+                                </tr>
+                                <tr>
+                                    <td>Total mensuel</td>
+                                    <td>50,03</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a>Voir les conditions generales</a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="container" style="background-color:#dddd;padding:15px;">
+                        <h3 class="text-center">Confirmation</h3>
+                        <div class="form-group ">
+                            <label for="exampleInputEmail1">Date d'effet *</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6">
+                    <div class="buttons mt-4" style="float:right;">
+                        <button class="btn btn-secondary" style="background-color: #6c757d;color:white;">Etape precedente</button><button class="btn btn-lg ml-2 mt-2">Etape Suivante</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="pills-accident" role="tabpanel" aria-labelledby="pills-accident-tab">
+        <div class="container" style="background-color:#dddd;padding:15px;">
+            <div class="row">
+                <div class="col">
+                    <p class="text-center">Souscrire la Responsiblite Civile Familiale?</p>
+                </div>
+                <div class="col">
+                    <div class="btn-group btn-toggle"> 
+                        <button class="btn btn-default">ON</button>
+                        <button class="btn btn-primary active">OFF</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5" style="background-color:#dddd;padding:15px;">
+            <h3 class="text-center">Assure Precedent</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group ">
+                        <label for="exampleInputEmail1">Compagine *</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">N Police *</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5" style="background-color:#dddd;padding:15px;">
+            <div class="row">
+                <div class="col">
+                    <p class="text-center">Souscrire la Responsiblite Civile Familiale?</p>
+                </div>
+                <div class="col">
+                    <div class="btn-group btn-toggle"> 
+                        <button class="btn btn-default">ON</button>
+                        <button class="btn btn-primary active">OFF</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5" style="background-color:#dddd;padding:15px;">
+            <table class="table table-striped table-responsive-sm">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">PREMIUM</th>
+                        <th scope="col">SERNITE</th>
+                        <th scope="col">PRIVILEGE</th>
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr>
+                        <td scope="row"></td>
+                        <td>47,62</td>
+                        <td>57,17</td>
+                        <td>50,93</td>
+                    </tr>
+                    <tr>
+                        <td>Incendie</td>
+                        <td><i class="fa fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
+                        <td><i class="fa fa-check"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="container" style="background-color:#dddd;padding:15px;">
+                        <table class="table table-responsive-sm">
+                            <tbody>
+                                <tr>
+                                    <td>Formule choisie</td>
+                                    <td>PRIVILEGE</td>
+                                </tr>
+                                <tr>
+                                    <td>Prime</td>
+                                    <td>50,03</td>
+                                </tr>
+                                <tr>
+                                    <td>Honoraries</td>
+                                    <td>0,00</td>
+                                </tr>
+                                <tr>
+                                    <td>Total mensuel</td>
+                                    <td>50,03</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a>Voir les conditions generales</a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="container" style="background-color:#dddd;padding:15px;">
+                        <h3 class="text-center">Confirmation</h3>
+                        <p><b>Je confirme que l'objet de risque, l'assure et l'usage du risque sont conforms aux conditions d'acceptations</b></p>
+                        <div class="btn-group btn-toggle"> 
+                            <button class="btn btn-default">ON</button>
+                            <button class="btn btn-primary active">Non</button>
+                        </div>
+                        <div class="form-group ">
+                            <label for="exampleInputEmail1">Date d'effet *</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6">
+                    <div class="buttons mt-4" style="float:right;">
+                        <button class="btn btn-secondary" style="background-color: #6c757d;color:white;">Etape precedente</button><button class="btn btn-lg ml-2 mt-2">Etape Suivante</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="pills-Recapitulatif" role="tabpanel" aria-labelledby="pills-Recapitulatif-tab">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="container" style="border: 1px solid #ddd;padding:15px;background-color:#eee;">
+                        <table class="table table-responsive">
+                            <thead>
+                                <tr>
+                                    <th class="col"><i class="fa fa-pencil"></i>Automobile</th>
+                                    <th class="col">Remise</th>
+                                    <th class="col">Prime mensulle</th>
+                                    <th class="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Citroen C1 80KW 1RHF375 - formule Omnium Privilege</td>
+                                    <td><input type="text" name=""></td>
+                                    <td>145,16</td>
+                                    <td><button type="submit" class="btn btn-secondary" style="background-color: #6c757d;color:white;">Derogation tarifaire</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="container mt-4" style="border:1px solid#dddd;padding:15px;background-color:#eee;">
+                        <table class="table table-responsive">
+                            <thead>
+                                <tr>
+                                    <th><i class="fa fa-pencil"></i>Incendie</th>
+                                    <th>Remise</th>
+                                    <th>Prime mensulle</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Citroen C1 80KW 1RHF375 - formule Omnium Privilege</td>
+                                    <td><input type="text" name=""></td>
+                                    <td>145,16</td>
+                                    <td><button type="submit" class="btn btn-secondary" style="background-color: #6c757d;color:white;">Derogation tarifaire</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="container mt-4" style="border:1px solid#dddd;padding:15px;background-color:#eee;">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col"><i class="fa fa-pencil"></i>Responsiblite civile</th>
+                                <th scope="col">Prime mensulle</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">FAMILIALE</th>
+                                <td>5,84</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="container mt-4" style="border:1px solid#dddd;padding:15px;background-color:#eee;">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col"><i class="fa fa-pencil"></i>Protection Juridique</th>
+                                <th scope="col">Prime mensulle</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">FAMILIALE</th>
+                                <td>5,84</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="container mt-4" style="border:1px solid#dddd;padding:15px;background-color:#eee;">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col"><i class="fa fa-pencil"></i>Assistence</th>
+                                <th scope="col">Prime mensulle</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">SERNITE</th>
+                                <td>5,84</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="container mt-4" style="border:1px solid#dddd;padding:15px;background-color:#eee;">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col"><i class="fa fa-pencil">INDIVIDUAL ACCIDENT</i></th>
+                                <th scope="col">Prime mensulle</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">Pemium</th>
+                                <td>5,84</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="container mt-4" style="border:1px solid#dddd;padding:15px;background-color:#eee;">
+                        <div class="form-group">
+                            <h3 class="text-center">Commentaire</h3>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="buttons mt-4" style="float: right;;">
+                        <button class="btn btn-secondary" style="background-color: #6c757d;color:white;">Imprimer</button><button class="btn btn-secondary ml-2" style="background-color: #6c757d;color:white;">Sauvegarder</button><button class="btn btn-lg ml-2 mt-2">Envoyer la Derogation</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="container mt-3" style="border:1px solid#dddd;padding:15px;background-color:#eee;">
+                        <table class="table table-responsive">
+                            <thead>
+                                <tr></tr>
+                                <tr></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Prime</td>
+                                    <td>143.84</td>
+                                </tr>
+                                <tr>
+                                    <td>Frais de gestion</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td>143.84</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="form-group">
+                           <label for="exampleFormControlText">N de pack du parrine</label>
+                            <input type="text" class="form-control" id="exampleFormControlText">
+                        </div>
+                    </div>
+                    <div class="container mt-4" style="border: 1px solid#dddd;border-style:dashed;">
+                        <div class="text-center">
+                            <i class="fa fa-download"></i>
+                            <h4>Proposition</h4>
+                            <p>Deposez ici la proposition Signee</p>
+                        </div>
+                    </div>
+                    <div class="container mt-4" style="border: 1px solid #dddd;border-style:dashed;">
+                        <div class="text-center">
+                            <i class="fa fa-download"></i>
+                            <h4>Rapport d evaluation</h4>
+                            <p>Deposez ici levaluation de batiment</p>
+                        </div>
+                    </div>
+                    <div class="container mt-4" style="border: 1px solid #dddd;border-style:dashed;">
+                        <div class="text-center">
+                            <i class="fa fa-download"></i>
+                            <h4>Attestation de sinistre</h4>
+                            <p>Deposez ici les documents</p>
+                        </div>
+                    </div>
+                    <div class="container mt-4" style="border: 1px solid #dddd;border-style:dashed;">
+                        <div class="text-center">
+                            <i class="fa fa-download"></i>
+                            <h4>Autres</h4>
+                            <p>Deposez ici tout autre document</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div id="footer">
+    <div class="container">
+        <nav id="menu-footer">
+            <ul id="menu-menu-secondaire" class="menu">
+                <li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19"><a href="http://www.five-insurance.be/#contact" translate>Contactez-nous</a></li>
+                <li id="menu-item-20" class="facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="https://www.facebook.com/pages/Five-Insurance-Company/1422688748029111" translate>Rejoignez la communauté Five sur Facebook</a></li>
+                <li id="menu-item-35" class="linkedin menu-item menu-item-type-custom menu-item-object-custom menu-item-35"><a href="https://www.linkedin.com/company/9328519?trk=tyah&amp;trkInfo=clickedVertical%3Acompany%2Cidx%3A2-1-2%2CtarId%3A1430748492894%2Ctas%3Afive%20insurance" translate>Retrouvez-nous sur LinkedIn</a></li>
+            </ul>
+        </nav>
+        <section class="contact-information" itemtype="http://microformats.org/profile/hcard" itemscope="">
+            <span class="five" itemprop="fn">Five</span>
+            <div itemprop="adr" itemscope="">
+                <p>
+                    <span itemprop="street-address">486, Chaussée de Marche</span><br>
+                    <span itemprop="postal-code">B-5101</span>
+                    <span itemprop="locality">Erpent</span>
+                </p>
+                <p>T. <span itemprop="tel">+32 81 84 15 20</span></p>
+                <p>F. +32 81 84 15 29</p>
+                <p>E. <span itemprop="email">info@five-insurance.be</span></p>
+            </div>
+        </section>
+    </div>
+</div>

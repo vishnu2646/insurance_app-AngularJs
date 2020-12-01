@@ -1,0 +1,799 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" href="#"><img height="50px" src="../../assets/images/logo.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            
+        </ul>
+        <div style="display:flex;justify-content:flex-end">
+            <div class="dropdown mr-5">
+                <button class="dropbtn">Bienvenue,ADMIN FIVE <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Dashboard</a>
+                  <a href="#">Mes demendes</a>
+                  <a href="#">Rediger une proposition</a>
+                  <a href="#">Evalution batiment</a>
+                  <a href="#">BLOG</a>
+                  <a href="#">Deconnexion</a>
+                </div>
+            </div> 
+            <div id="myNav" class="overlay">
+                <div class="overlay-content">
+                  <a href="#">About</a>
+                  <a href="#">Services</a>
+                  <a href="#">Clients</a>
+                  <a href="#">Contact</a>
+                </div>
+            </div>
+            <button (click)="fadeMenu()" class="btn" id="menu-toggle" data-toggle="collapse" data-target="#topnavbar" aria-controls="topnavbar" aria-expanded="false" style="background-color:#c4d500;
+            color: #3c3c3c;
+            text-transform: uppercase;
+            background-color: #c4d500;
+            height: 56px;
+            line-height: 56px;
+            display: inline-block;
+            font-size: 1.4rem;          
+            border-radius: 0rem;
+            padding: 0 24px 0 24px;
+            position: relative;
+            overflow: hidden;">&#9776; Menu</button>
+            <div *ngIf="menuOpen" class="hamburger-menu">
+                <div style="text-align: right;">
+                    <a (click)="fadeMenu()" class="fa fa-times fa-3x ml-2" style="color: white; margin: 20px; cursor: pointer;text-decoration:none"></a>
+                </div>
+                <ul id="menu-main-menu" class="hamburger-menu-links">
+                    <span class="link">ACCUEIL</span> <br>
+                    <span class="link">NOTRE PACK</span> <br>
+                    <span class="link">A PROPOS DE FIVE</span> <br>
+                    <span class="link">COURTIERS</span> <br>
+                    <span class="link">CONTACT</span>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="dashboard-tab" data-toggle="tab" href="#dashboard" role="tab" aria-controls="dashboard" aria-selected="true">DashBoard</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="packs-tab" data-toggle="tab" href="#packs" role="tab" aria-controls="packs" aria-selected="false">Packs</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="enattente-tab" data-toggle="tab" href="#enattente" role="tab" aria-controls="enattente" aria-selected="false">En attente</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="devis-tab" data-toggle="tab" href="#devis" role="tab" aria-controls="deivs" aria-selected="false">Devis</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="comptabillite-tab" data-toggle="tab" href="#comptabillite" role="tab" aria-controls="comptabillite" aria-selected="false">Comptabillite</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="bordereaux-tab" data-toggle="tab" href="#bordereaux" role="tab" aria-controls="bordereaux" aria-selected="false">Bordereaux</a>
+        </li>
+    </ul>
+    <br>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card mt-5">
+                            <div class="card-title text-center">
+                                Portefeuille actife
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <table class="table table-sm">
+                                            <tr>
+                                                <td>Packs souscrits ces 3 derniers mois</td>
+                                                <td><b>101</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Packs actifs</td>
+                                                <td><b>530</b></td>
+                                            </tr>
+                                        </table>
+                                       <!--<p>Packs souscrits ces 3 derniers mois <b>101</b></p> 
+                                        <p>Packs actifs <b>530</b></p>-->
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Charts</p>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mt-5">
+                            <div class="card-title text-center">
+                                Transformations propositions/contacts
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <table class="table table-sm">
+                                            <tr>
+                                                <td>Propositions sauvegards</td>
+                                                <td><b>37</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Transformations en packs</td>
+                                                <td><b>0</b></td>
+                                            </tr>
+                                        </table>
+                                        <!--<p>Packs souscrits ces 3 derniers mois <b>101</b></p> 
+                                        <p>Packs actifs <b>530</b></p>-->
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>charset</p>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card mt-5" style="height: 250px;">
+                            <div class="card-title text-center">
+                                Primes impayeeys
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <table class="table table-sm">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Reppel</td>
+                                                    <td><b class="bol">0,000</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mise en demeure</td>
+                                                    <td><b class="bol">551,04</b></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!--<p>Reppel <b class="bol">0,000</b></p> 
+                                        <p>Mise en demeure <b class="bol">551,04</b></p>-->
+                                    </div>
+                                </div> 
+                                <button class="btn ml-5" style="background-color: #6c757d;color:white;">voir les rapples</button>
+                                <button class="btn ml-5">voir les mises en demeure</button>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="col">
+                        <div class="card mt-5" style="height: 250px;">
+                            <div class="card-title text-center">
+                                Commissions previsionnells
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="packs" role="tabpanel" aria-labelledby="packs-tab">
+            <div class="container" style="background-color:#eee; padding:12px;border-radius:5px;border-color:1px solid #ddd;">
+                <table class="table table-condensed table-responsive table-sm" id="myTable">
+                    <thead style="background-color: rgb(54, 54, 54);color: white;font-size:15px;">
+                        <tr>
+                            <th>Pack <i class="fa fa-caret-down"></i></th>
+                            <th>Nom <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Prenom <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Compagine <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Fourmule <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Risque <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Plaque <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Date de debute <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Statut <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="panel">
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <select id="inputStatus" class="form-control">
+                                    <option>FIDEA</option>
+                                    <option>Failed</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <select id="inputStatus" class="form-control">
+                                    <option>RC Auto</option>
+                                    <option>Failed</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <select id="inputStatus" class="form-control">
+                                    <option>Success</option>
+                                    <option>Failed</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="height: 10px;">
+                            <td class="td-data-1" colspan="3" (click)="hideRow()">
+                                <i class="fa fa-angle-down"></i> &nbsp; Pack : 00002329
+                            </td>
+                            <td class="td-data" colspan="7">
+                                <i class="fa fa-pencil-square-o"></i> &nbsp; Modifier &nbsp;
+                                <i class="fa fa-download"></i> &nbsp; Documents
+                            </td>
+                        </tr>
+                        <tr *ngIf="row">
+                            <td></td>
+                            <td>LYUTEN</td>
+                            <td>Mathieu</td>
+                            <td>FIDA</td>
+                            <td>RC Famillie</td>
+                            <td></td>
+                            <td></td>
+                            <td>09/06/2000</td>
+                            <td>En Cours</td>
+                            <td><button type="submit" class="btn" data-toggle="collapse" data-target="#demo1" data-parent="#myTable">Details</button></td>
+                        </tr>
+                        <tr id="demo1" class="collapse" style="background-color: white;color:black;border-color: 1px solid gray;">
+                            <td colspan="11" class="hiddenRow">
+                                <div class="container">
+                                    <h3>LYUTEN Mathieu</h3>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <table class="table table-sm">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Address mail</td>
+                                                        <td>mail@mail.be</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Telephone</td>
+                                                        <td>081234567</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <table class="table table-sm">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>N de pack</td>
+                                                        <td>0000002329</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Statut</td>
+                                                        <td>En Cours</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Formule</td>
+                                                        <td>Rc Familiale</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Compagine</td>
+                                                        <td>FIDEA</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Risque</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <table class="table table-sm">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Date d'effect</td>
+                                                        <td>07/06/2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Date resiliation</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr *ngIf="row">
+                            <td></td>
+                            <td>LYUTEN</td>
+                            <td>Mathieu</td>
+                            <td>FIDA</td>
+                            <td>RC Famillie</td>
+                            <td></td>
+                            <td></td>
+                            <td>09/06/2000</td>
+                            <td>En Cours</td>
+                            <td><button type="submit" class="btn" data-toggle="collapse" data-target="#demo" data-parent="#myTable">Details</button></td>
+                        </tr>
+                        <tr id="demo" class="collapse" style="background-color: white;color:black;border-color: 1px solid gray;">
+                            <td colspan="11" class="hiddenRow">
+                                <div class="container">
+                                    <h3>LYUTEN Mathieu</h3>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <table class="table table-sm">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Address mail</td>
+                                                        <td>mail@mail.be</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Telephone</td>
+                                                        <td>081234567</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <table class="table table-sm">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>N de pack</td>
+                                                        <td>0000002329</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Statut</td>
+                                                        <td>En Cours</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Formule</td>
+                                                        <td>Rc Familiale</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Compagine</td>
+                                                        <td>FIDEA</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Risque</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <table class="table table-sm">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Date d'effect</td>
+                                                        <td>07/06/2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Date resiliation</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="enattente" role="tabpanel" aria-labelledby="enattente-tab">
+            <div class="container" style="background-color: rgb(240, 240, 240); padding:12px;border-radius:5px;border-color:1px solid #ddd;">
+                <table class="table table-condensed table-responsive-sm"  id="myTable">
+                    <thead style="background-color: rgb(54, 54, 54);color: white;">
+                        <tr>
+                            <th>Pack <i class="fa fa-caret-down"></i></th>
+                            <th>Nom <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Prenom <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Date de debute <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Statut <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="panel">
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td><div class="form-group">
+                                    <select id="inputStatus" class="form-control">
+                                    <option>Success</option>
+                                    <option>Failed</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>000015465</td>
+                            <td>DORT</td>
+                            <td>Alex</td>
+                            <td>09/06/2000</td>
+                            <td>Proposition</td>
+                            <td><button type="submit" class="btn" data-toggle="collapse" data-target="#demo1" data-parent="#myTable">Detail</button></td>
+                            <td><a [routerLink]="['/broker-details']" routerLinkActive="router-link-active" ><button type="submit" class="btn">Ouvrir</button></a></td>
+                            <td><i class="fa fa-close fa-2x"></i></td>
+                        </tr>
+                        <tr id="demo1" class="collapse" style="background-color: white;color:black;border-color: 1px solid gray;">
+                            <td colspan="11" class="hiddenRow">
+                                <div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h3>DORT Alex</h3>
+                                                <p>CONTRAT ASSISTANCE SERENITE</p>
+                                                <hr>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3>Email:av@iga.fr - Tel: 3289328992</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>000015465</td>
+                            <td>DORT</td>
+                            <td>Alex</td>
+                            <td>09/06/2000</td>
+                            <td>Proposition</td>
+                            <td><button type="submit" class="btn" data-toggle="collapse" data-target="#demo" data-parent="#myTable">Detail</button></td>
+                            <td><a [routerLink]="['/broker-details']" routerLinkActive="router-link-active" ><button type="submit" class="btn">Ouvrir</button></a></td>
+                            <td><i class="fa fa-close fa-2x"></i></td>
+                        </tr>
+                        <tr id="demo" class="collapse" style="background-color: white;color:black;border-color: 1px solid gray;">
+                            <td colspan="11" class="hiddenRow">
+                                <div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h3>DORT Alex</h3>
+                                                <p>CONTRAT ASSISTANCE SERENITE</p>
+                                                <hr>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3>Email:av@iga.fr - Tel: 3289328992</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>000015465</td>
+                            <td>DORT</td>
+                            <td>Alex</td>
+                            <td>09/06/2000</td>
+                            <td>Proposition</td>
+                            <td><button type="submit" class="btn" data-toggle="collapse" data-target="#demo2" data-parent="#myTable">Detail</button></td>
+                            <td><a [routerLink]="['/broker-details']" routerLinkActive="router-link-active" ><button type="submit" class="btn">Ouvrir</button></a></td>
+                            <td><i class="fa fa-close fa-2x"></i></td>
+                        </tr>
+                        <tr id="demo2" class="collapse" style="background-color: white;color:black;border-color: 1px solid gray;">
+                            <td colspan="11" class="hiddenRow">
+                                <div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h3>DORT Alex</h3>
+                                                <p>CONTRAT ASSISTANCE SERENITE</p>
+                                                <hr>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h3>Email:av@iga.fr - Tel: 3289328992</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="devis" role="tabpanel" aria-labelledby="devis-tab">
+            <div class="container" style="background-color: rgb(240, 240, 240); padding:12px;border-radius:5px;border-color:1px solid #ddd;">
+                <table class="table table-condensed table-responsive-sm"  id="myTable">
+                    <thead style="background-color: rgb(54, 54, 54);color: white;font-size:15px;">
+                        <tr>
+                            <th>Pack</th>
+                            <th>Nom </th>
+                            <th>Prenom</th>
+                            <th>Date de debute</th>
+                            <th>Date de modification</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="panel">
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>000015465</td>
+                            <td>DORT</td>
+                            <td>Alex</td>
+                            <td>09/06/2000</td>
+                            <td>12/07/2020</td>
+                            <td><button type="submit" class="btn" data-toggle="collapse" data-target="#demo1" data-parent="#myTable">Detail</button></td>
+                            <td><a [routerLink]="['/broker-details']" routerLinkActive="router-link-active" ><button type="submit" class="btn">Ouvrir</button></a></td>
+                            <td><i class="fa fa-close fa-2x"></i></td>
+                        </tr>
+                        <tr id="demo1" class="collapse" style="background-color: white;color:black;border-color: 1px solid gray;">
+                            <td colspan="11" class="hiddenRow">
+                                <div>
+                                    <div class="container mt-4">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4>GENNART Jose</h4>
+                                                <table class="table table-sm">
+                                                    <tr>
+                                                        <td>CONTRAT AUTOMOBILE RC</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CONTRAT AUTOMOBILE RC</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CONTRAT AUTOMOBILE RC</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h5>Email: josegennart@hotmail.fr - Tel: 0483252136</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>000015465</td>
+                            <td>DORT</td>
+                            <td>Alex</td>
+                            <td>09/06/2000</td>
+                            <td>12/07/2020</td>
+                            <td><button type="submit" class="btn" data-toggle="collapse" data-target="#demo2" data-parent="#myTable">Detail</button></td>
+                            <td><a [routerLink]="['/broker-details']" routerLinkActive="router-link-active" ><button type="submit" class="btn">Ouvrir</button></a></td>
+                            <td><i class="fa fa-close fa-2x"></i></td>
+                        </tr>
+                        <tr id="demo2" class="collapse" style="background-color: white;color:black;border-color: 1px solid gray;">
+                            <td colspan="11" class="hiddenRow">
+                                <div>
+                                    <div class="container mt-4">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4>GENNART Jose</h4>
+                                                <table class="table table-sm">
+                                                    <tr>
+                                                        <td>CONTRAT AUTOMOBILE RC</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CONTRAT AUTOMOBILE RC</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>CONTRAT AUTOMOBILE RC</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h5>Email: josegennart@hotmail.fr - Tel: 0483252136</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+                
+        <div class="tab-pane fade" id="comptabillite" role="tabpanel" aria-labelledby="comptabillite-tab">
+            <div class="search">
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control mr-sm-2" placeholder="Search">
+                    </div>
+                </form>
+            </div>
+            <div class="container" style="background-color: rgb(240, 240, 240); padding:12px;border-radius:5px;border-color:1px solid #ddd;">
+                <table class="table table-condensed table-responsive-sm"  id="myTable">
+                    <thead style="background-color: rgb(54, 54, 54);color: white;">
+                        <tr>
+                            <th>Statut <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Numero <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Nom <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Prenom <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Solde compte <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="panel">
+                        <tr>
+                            <td>MED</td>
+                            <td>0000008290</td>
+                            <td >HECHT</td>
+                            <td>Gaetan</td>
+                            <td>5,29 €</td>
+                            <td><button type="submit" class="btn" data-toggle="collapse" data-target="#demo1" data-parent="#myTable">Detail</button></td>
+                        </tr>
+                        <tr id="demo1" class="collapse" style="background-color:rgb(240, 240, 240);color:black;border-color: 1px solid gray;">
+                            <td colspan="11" class="hiddenRow">
+                                <div>
+                                    <table class="table table-sm table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Type</th>
+                                                <th>A payer</th>
+                                                <th>Paye()</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>12/02/2020</td>
+                                                <td>Quittance</td>
+                                                <td>123,69</td>
+                                                <td>0,0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12/02/2020</td>
+                                                <td>Quittance</td>
+                                                <td>123,69</td>
+                                                <td>0,0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr data-toggle="collapse" data-target="#demo2" data-parent="#myTable">
+                            <td>MED</td>
+                            <td>0000008290</td>
+                            <td >HECHT</td>
+                            <td>Gaetan</td>
+                            <td>5,29 €</td>
+                            <td><button type="submit" class="btn">Detail</button></td>
+                        </tr>
+                        <tr id="demo2" class="collapse" style="background-color:rgb(240, 240, 240);color:black;border-color: 1px solid gray;">
+                            <td colspan="11" class="hiddenRow">
+                                <div>
+                                    <table class="table table-sm table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Type</th>
+                                                <th>A payer</th>
+                                                <th>Paye()</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>12/02/2020</td>
+                                                <td>Quittance</td>
+                                                <td>123,69</td>
+                                                <td>0,0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12/02/2020</td>
+                                                <td>Quittance</td>
+                                                <td>123,69</td>
+                                                <td>0,0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="bordereaux" role="tabpanel" aria-labelledby="bordereaux-tab">
+            <div class="container">
+                <table class="table table-responsive-sm">
+                    <thead>
+                        <th>Date</th>
+                        <th>Libelle</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12/6/2020</td>
+                            <td>Bordereau du 30/11/2019</td>
+                            <td><button type="submit" class="btn"><i class="fa fa-download"></i>Telecharger</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <nav id="menu-footer">
+            <ul id="menu-menu-secondaire" class="menu">
+                <li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19"><a href="http://www.five-insurance.be/#contact" translate>Contactez-nous</a></li>
+                <li id="menu-item-20" class="facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="https://www.facebook.com/pages/Five-Insurance-Company/1422688748029111" translate>Rejoignez la communauté Five sur Facebook</a></li>
+                <li id="menu-item-35" class="linkedin menu-item menu-item-type-custom menu-item-object-custom menu-item-35"><a href="https://www.linkedin.com/company/9328519?trk=tyah&amp;trkInfo=clickedVertical%3Acompany%2Cidx%3A2-1-2%2CtarId%3A1430748492894%2Ctas%3Afive%20insurance" translate>Retrouvez-nous sur LinkedIn</a></li>
+            </ul>
+        </nav>
+        <section class="contact-information" itemtype="http://microformats.org/profile/hcard" itemscope="">
+            <span class="five" itemprop="fn">Five</span>
+            <div itemprop="adr" itemscope="">
+                <p>
+                    <span itemprop="street-address">486, Chaussée de Marche</span><br>
+                    <span itemprop="postal-code">B-5101</span>
+                    <span itemprop="locality">Erpent</span>
+                </p>
+                <p>T. <span itemprop="tel">+32 81 84 15 20</span></p>
+                <p>F. +32 81 84 15 29</p>
+                <p>E. <span itemprop="email">info@five-insurance.be</span></p>
+            </div>
+        </section>
+    </div>
+</div>

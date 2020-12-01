@@ -1,0 +1,206 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" href="#"><img height="50px" src="../../assets/images/logo.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            
+        </ul>
+        <div style="display:flex;justify-content:flex-end">
+            <div class="dropdown mr-5">
+                <button class="dropbtn">Bienvenue,ADMIN FIVE <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                  <a href="#">Dashboard</a>
+                  <a href="#">Mes demendes</a>
+                  <a href="#">Rediger une proposition</a>
+                  <a href="#">Evalution batiment</a>
+                  <a href="#">BLOG</a>
+                  <a href="#">Deconnexion</a>
+                </div>
+            </div> 
+            <div id="myNav" class="overlay">
+                <div class="overlay-content">
+                  <a href="#">About</a>
+                  <a href="#">Services</a>
+                  <a href="#">Clients</a>
+                  <a href="#">Contact</a>
+                </div>
+            </div>
+            <button class="btn" id="menu-toggle" style="background-color:#c4d500;">&#9776; Menu</button>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="pack-tab" data-toggle="tab" href="#pack" role="tab" aria-controls="pack" aria-selected="true">Pack</a>
+        </li>
+    </ul>
+    <br>
+    <div class="search">
+        <form class="form-inline my-2 my-lg-0">
+            <div class="form-group has-search">
+                <span class="fa fa-search form-control-feedback"></span>
+                <input type="text" class="form-control mr-sm-2" placeholder="Search">
+            </div>
+        </form>
+    </div>
+    <div class="tab-content mt-5" id="myTabContent">
+        <div class="tab-pane fade show active" id="pack" role="tabpanel" aria-labelledby="pack-tab">
+            <div class="container" style="background-color:#eee; padding:12px;border-radius:5px;border-color:1px solid #ddd;">
+                <table class="table table-condensed table-responsive-sm" id="myTable">
+                    <thead style="background-color: rgb(54, 54, 54);color: white;">
+                        <tr>
+                            <th>Pack <i class="fa fa-caret-down"></i></th>
+                            <th>Nom <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Prenom <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Fourmule <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Risque <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Date de debute <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Statut <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="panel">
+                        <tr style="height: 10px;">
+                            <td class="td-data-1" colspan="3" (click)="hideRow()">
+                                <i class="fa fa-angle-down"></i> &nbsp; Pack : 00001702
+                            </td>
+                            <td class="td-data" colspan="7">
+                                <i class="fa fa-user"></i> &nbsp; Creer un compte client &nbsp;
+                                <i class="fa fa-eur"></i> &nbsp; Moyen de paiement &nbsp;
+                                <i class="fa fa-edit"></i> &nbsp; Avenant admin &nbsp;
+                                <i class="fa fa-edit"></i> &nbsp; Modifier &nbsp;
+                                <i class="fa fa-download"></i> &nbsp; Documents
+                            </td>
+                        </tr>
+                        <tr *ngIf="row">
+                            <td></td>
+                            <td>PERMMERS</td>
+                            <td>Oliver</td>
+                            <td>Habitation serenite</td>
+                            <td>Rue du Centaure 254</td>
+                            <td>12/12/2020</td>
+                            <td>En Cours</td>
+                            <td><button type="submit" class="btn" data-toggle="collapse" data-target="#demo1" data-parent="#myTable">Details</button></td>
+                        </tr>
+                        <tr id="demo1" class="collapse" style="background-color: white;color:black;border-color: 1px solid gray;">
+                            <td colspan="11" class="hiddenRow"><div>
+                                <h3 class="mt-4 ml-5">IABANIJ Vasile</h3>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <table class="table table-sm">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>N de Pack</td>
+                                                        <td>0000010054</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Stutat</td>
+                                                        <td>En Cours</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Formule</td>
+                                                        <td>RC Famillie</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <table class="table table-sm">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Risque</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Date d'effect</td>
+                                                        <td>En Cours</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Date resilliation</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <table class="table table-sm">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>CP_RCFA200700035_20200707.pdf <i class="fa fa-download"></i></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <h4 class="change">Preneur</h4>
+                                            <table class="table table-sm">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Nom</td>
+                                                        <td>IABANIJ</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Prenom</td>
+                                                        <td>Vasile</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Date de naissance</td>
+                                                        <td>12/12/2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Date de permis</td>
+                                                        <td>01/10/2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Address mail</td>
+                                                        <td>mail@mail.be</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Telephone</td>
+                                                        <td>081234567</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Address postale</td>
+                                                        <td>Rue de Bastaure 254, 5267 Jodoigne</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <h4 class="change">Assure(s)</h4>
+                                            <table class="table table-sm">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Nom</th>
+                                                        <th>Prenom</th>
+                                                        <th>Date de naissance</th>
+                                                        <th>Date de permis</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>IABANIJ</td>
+                                                        <td>Jean</td>
+                                                        <td>12/12/2020</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

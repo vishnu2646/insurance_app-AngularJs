@@ -1,0 +1,671 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <a class="navbar-brand" href="#">
+        <img height="50px" src="../../assets/images/logo.png">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+        </ul>
+        <div style="display:flex;justify-content:flex-end">
+            <div class="dropdown mr-5">
+                <button class="dropbtn">Bienvenue,ADMIN FIVE <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#">Dashboard</a>
+                    <a href="#">Mes demendes</a>
+                    <a href="#">Rediger une proposition</a>
+                    <a href="#">Evalution batiment</a>
+                    <a href="#">BLOG</a>
+                    <a href="#">Deconnexion</a>
+                </div>
+            </div>
+            <div id="myNav" class="overlay">
+                <div class="overlay-content">
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Clients</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <button (click)="fadeMenu()" class="btn" id="menu-toggle" data-toggle="collapse" data-target="#topnavbar" aria-controls="topnavbar" aria-expanded="false" style="background-color:#c4d500;
+            color: #3c3c3c;
+            text-transform: uppercase;
+            background-color: #c4d500;
+            height: 56px;
+            line-height: 56px;
+            display: inline-block;
+            font-size:15px;          
+            border-radius: 0rem;
+            padding: 0 24px 0 24px;
+            position: relative;
+            text-align: center;
+            overflow: hidden;"><i class="fa fa-bars fa-2x"></i> Menu</button>
+            <div *ngIf="menuOpen" class="hamburger-menu">
+                <div style="text-align: right;">
+                    <a (click)="fadeMenu()" class="fa fa-times fa-3x ml-2" style="color: white; margin: 20px; cursor: pointer;text-decoration: none;"></a>
+                </div>
+                <ul id="menu-main-menu" class="hamburger-menu-links">
+                    <span class="link">ACCUEIL</span> <br>
+                    <span class="link">NOTRE PACK</span> <br>
+                    <span class="link">A PROPOS DE FIVE</span> <br>
+                    <span class="link">COURTIERS</span> <br>
+                    <span class="link">CONTACT</span>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<nav id="overlay-menu">
+
+</nav>
+<div id="overlay">
+
+</div>
+<div class="container">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="packs-tab" data-toggle="tab" href="#packs" role="tab" aria-controls="packs" aria-selected="true">Packs</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="derogations-tab" data-toggle="tab" href="#derogations" role="tab" aria-controls="derogations" aria-selected="false">Derogations en attente</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="packa-tab" data-toggle="tab" href="#packa" role="tab" aria-controls="packa" aria-selected="false">Pack a Valider</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="avanant-tab" data-toggle="tab" href="#avanant" role="tab" aria-controls="avanant" aria-selected="false">Avanant a Valider</a>
+        </li>
+    </ul>
+    <br>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="packs" role="tabpanel" aria-labelledby="packs-tab">
+            <div class="container" style="background-color:#eee; padding:12px;border-radius:5px;border-color:1px solid #ddd;">
+                <table class="table table-condensed table-responsive-sm" id="myTable">
+                    <thead style="background-color: rgb(54, 54, 54);color: white;font-size:15px;">
+                        <tr>
+                            <th>Pack <i class="fa fa-caret-down"></i></th>
+                            <th>Nom  <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Prenom <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Courtier <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Fourmule <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Risque <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Branche <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th style="font-size:12px;">Date de debute <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Statut <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="panel">
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <select id="inputStatus" class="form-control">
+                                    <option>Success</option>
+                                    <option>Failed</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="height: 10px;">
+                            <td class="td-data-1" colspan="3" (click)="hideRow()">
+                                <i class="fa fa-angle-down"></i> &nbsp; Pack : 00001702
+                            </td>
+                            <td class="td-data" colspan="7">
+                                <i class="fa fa-user"></i> &nbsp; Creer un compte client &nbsp;
+                                <i class="fa fa-eur"></i> &nbsp; Moyen de paiement &nbsp;
+                                <i class="fa fa-edit"></i> &nbsp; Avenant admin &nbsp;
+                                <i class="fa fa-edit"></i> &nbsp; Modifier &nbsp;
+                                <i class="fa fa-download"></i> &nbsp; Documents
+                            </td>
+                        </tr>
+                        <tr *ngIf="row" data-toggle="collapse" data-target="#demo1" data-parent="#myTable">
+                            <td></td>
+                            <td>PERMMERS</td>
+                            <td>Oliver</td>
+                            <td>Ofac+Assurance Libramount</td>
+                            <td>RC Famillie</td>
+                            <td></td>
+                            <td>RC</td>
+                            <td>09/06/2000</td>
+                            <td>Proposition</td>
+                        </tr>
+                        <tr id="demo1" class="collapse" style="background-color: white;color:black;border-color: 1px solid gray;">
+                            <td colspan="11" class="hiddenRow">
+                                <div class="container">
+                                    <h3>PERMMERS Oliver</h3>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>N de pack</td>
+                                                        <td>00000010072</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Statut</td>
+                                                        <td>En cours</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Fourmule</td>
+                                                        <td>RC Fourmule</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Compagine</td>
+                                                        <td>FIDEA</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Risque</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <table>
+                                                <div class="tbody">
+                                                    <tr>
+                                                        <td>N de pack</td>
+                                                        <td>00000010072</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Statut</td>
+                                                        <td>En cours</td>
+                                                    </tr>
+                                                </div>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr *ngIf="row" data-toggle="collapse" data-target="#demo2" data-parent="#myTable">
+                            <td></td>
+                            <td>PERMMERS</td>
+                            <td>Oliver</td>
+                            <td>Ofac+Assurance Libramount</td>
+                            <td>RC Famillie</td>
+                            <td></td>
+                            <td>RC</td>
+                            <td>09/06/2000</td>
+                            <td>Proposition</td>
+                        </tr>
+                        <tr id="demo2" class="collapse" style="background-color: white;color:black;border-color: 1px solid gray;">
+                            <td colspan="11" class="hiddenRow">
+                                <div class="container">
+                                    <h3>PERMMERS Oliver</h3>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>N de pack</td>
+                                                        <td>00000010072</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Statut</td>
+                                                        <td>En cours</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Fourmule</td>
+                                                        <td>RC Fourmule</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Compagine</td>
+                                                        <td>FIDEA</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Risque</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <table>
+                                                <div class="tbody">
+                                                    <tr>
+                                                        <td>N de pack</td>
+                                                        <td>00000010072</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Statut</td>
+                                                        <td>En cours</td>
+                                                    </tr>
+                                                </div>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <nav aria-label="Page navigation example" class="d-flex justify-content-center pt-1 pb-1 mt-5">
+                <ul class="pagination">
+                  <li class="page-item" id="pagPrevious">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#" id="pag01">01</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag02">02</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag03">03</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag04">04</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag05">05</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag06">06</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag07">07</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag08">08</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag09">09</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag10">10</a></li>
+                  <li class="page-item" id="pagNext">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="tab-pane fade" id="derogations" role="tabpanel" aria-labelledby="derogations-tab">
+            <div class="container" style="background-color:rgb(240, 240, 240);padding:12px;border-radius:5px;border-color:1px solid #ddd;">
+                <table class="table table-condensed table-responsive-sm" id="myTable">
+                    <thead style="background-color: rgb(54, 54, 54);color:white;">
+                        <tr>
+                            <th>Date Demande <i class="fa fa-caret-down"></i></th>
+                            <th>Pack <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Courtier <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Nom <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Prenom <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Statut <i class="fa fa-sort" aria-hidden="true"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody class="panel">
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <select id="inputStatus" class="form-control">
+                                    <option>Success</option>
+                                    <option>Failed</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12/12/2020</td>
+                            <td>000001251</td>
+                            <td>Ofac+Assurance Libramount</td>
+                            <td>DEVAUX</td>
+                            <td>Benjamin</td>
+                            <td>Affaire nouvelle</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/2020</td>
+                            <td>000001251</td>
+                            <td>Ofac+Assurance Libramount</td>
+                            <td>DEVAUX</td>
+                            <td>Benjamin</td>
+                            <td>Affaire nouvelle</td>
+                        </tr>
+                        <tr>
+                            <td>12/12/2020</td>
+                            <td>000001251</td>
+                            <td>Ofac+Assurance Libramount</td>
+                            <td>DEVAUX</td>
+                            <td>Benjamin</td>
+                            <td>Affaire nouvelle</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="packa" role="tabpanel" aria-labelledby="packa-tab">
+            <div class="container" style="background-color: rgb(240, 240, 240); padding:12px;border-radius:5px;border-color:1px solid #ddd;">
+                <table class="table table-condensed table-responsive-sm" id="myTable">
+                    <thead style="background-color: rgb(54, 54, 54);color: white;">
+                        <tr>
+                            <th>Pack <i class="fa fa-caret-down"></i></th>
+                            <th>Courtier <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Nom <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Prenom <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Date modification <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="panel">
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>0000017262</td>
+                            <td>FAGNES FINANCES SPRL</td>
+                            <td>PESTIAUX</td>
+                            <td>Louka</td>
+                            <td>09/06/2000</td>
+                            <td><button type="submit" class="btn" data-toggle="collapse" data-target="#demo1" data-parent="#myTable">Detail</button></td>
+                        </tr>
+                        <tr id="demo1" class="collapse" style="background-color: white;color: black;border-color: 1px solid gray;">
+                            <td colspan="11" class="hiddenRow">
+                                <div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                <h3 class="email">PESTIAUX Louka</h3>
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>CONTRAT <b>Automobile Mini-omnimum</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>CONTRAT <b>PJ AUTO</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>CONTRAT <b>IA SERENITE</b></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-sm">
+                                                <h3 class="email">EMAIL:louk1994@hotmail.com-Tel:060/51.20.26</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>0000017262</td>
+                            <td>FAGNES FINANCES SPRL</td>
+                            <td>PESTIAUX</td>
+                            <td>Louka</td>
+                            <td>09/06/2000</td>
+                            <td><button type="submit" class="btn" data-toggle="collapse" data-target="#demo2" data-parent="#myTable">Detail</button></td>
+                        </tr>
+                        <tr id="demo2" class="collapse" style="background-color: white;color: black;border-color: 1px solid gray;">
+                            <td colspan="11" class="hiddenRow">
+                                <div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                <h3 class="email">PESTIAUX Louka</h3>
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>CONTRAT <b>Automobile Mini-omnimum</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>CONTRAT <b>PJ AUTO</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>CONTRAT <b>IA SERENITE</b></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-sm">
+                                                <h3 class="email">EMAIL:louk1994@hotmail.com-Tel:060/51.20.26</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <nav aria-label="Page navigation example" class="d-flex justify-content-center pt-1 pb-1 mt-5">
+                <ul class="pagination">
+                  <li class="page-item" id="pagPrevious">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag01">01</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag02">02</a></li>
+                  <li class="page-item active"><a class="page-link" href="#" id="pag03">03</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag04">04</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag05">05</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag06">06</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag07">07</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag08">08</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag09">09</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag10">10</a></li>
+                  <li class="page-item" id="pagNext">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="tab-pane fade" id="avanant" role="tabpanel" aria-labelledby="avanant-tab">
+            <div class="container" style="background-color: rgb(240, 240, 240); padding:12px;border-radius:5px;border-color:1px solid #ddd;">
+                <table class="table table-condensed table-responsive-sm" id="myTable">
+                    <thead style="background-color: rgb(54, 54, 54);color: white;font-size:15px;">
+                        <tr>
+                            <th>Pack <i class="fa fa-caret-down"></i></th>
+                            <th>Courtier <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Nom <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Prenom <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th>Date modification <i class="fa fa-sort" aria-hidden="true"></i></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="panel">
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="inputEmail4">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>0000017262</td>
+                            <td>FAGNES FINANCES SPRL</td>
+                            <td>PESTIAUX</td>
+                            <td>Louka</td>
+                            <td>09/06/2000</td>
+                            <td><button type="submit" class="btn" style="background-color:#c4d500;" data-toggle="collapse" data-target="#demo1" data-parent="#myTable">Detail</button></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="demo1" class="collapse" style="background-color:white;color:black;border-color:1px solid #ddd;">
+                            <td colspan="11" class="hiddenRow">
+                                <div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                <h3 class="email">DELPORTE Jonathan</h3>
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>CONTRAT <b>Automobile Mini-omnimum serenite</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>CONTRAT <b>Automobile Mini-omnimum serenite</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>CONTRAT <b>INCENDIE RC Locataire Serenite</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>CONTRAT <b>RC FAMILIALE</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>CONTRAT <b>ASSISTANCE AUTO</b></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-sm">
+                                                <h3 class="email">EMAIL:jondelp@msn.com-Tel:0497081647</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>0000017262</td>
+                            <td>FAGNES FINANCES SPRL</td>
+                            <td>PESTIAUX</td>
+                            <td>Louka</td>
+                            <td>09/06/2000</td>
+                            <td><button type="submit" class="btn" style="background-color:#c4d500;" data-toggle="collapse" data-target="#demo2" data-parent="#myTable">Detail</button></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr id="demo2" class="collapse" style="background-color:white;color:black;border-color:1px solid #ddd;">
+                            <td colspan="11" class="hiddenRow">
+                                <div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                <h3 class="email">DELPORTE Jonathan</h3>
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>CONTRAT <b>Automobile Mini-omnimum serenite</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>CONTRAT <b>Automobile Mini-omnimum serenite</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>CONTRAT <b>INCENDIE RC Locataire Serenite</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>CONTRAT <b>RC FAMILIALE</b></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>CONTRAT <b>ASSISTANCE AUTO</b></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-sm">
+                                                <h3 class="email">EMAIL:jondelp@msn.com-Tel:0497081647</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <nav aria-label="Page navigation example mt-5" class="d-flex justify-content-center pt-1 pb-1 mt-5">
+                <ul class="pagination">
+                  <li class="page-item" id="pagPrevious">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag01">01</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag02">02</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag03">03</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id="pag04">04</a></li>
+                  <li class="page-item active"><a class="page-link" href="#" id="pag05">05</a></li>
+                  <li class="page-item" id="pagNext">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div class="container">
+        <nav id="menu-footer">
+            <ul id="menu-menu-secondaire" class="menu">
+                <li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19"><a href="http://www.five-insurance.be/#contact" translate>Contactez-nous</a></li>
+                <li id="menu-item-20" class="facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="https://www.facebook.com/pages/Five-Insurance-Company/1422688748029111" translate>Rejoignez la communauté Five sur Facebook</a></li>
+                <li id="menu-item-35" class="linkedin menu-item menu-item-type-custom menu-item-object-custom menu-item-35"><a href="https://www.linkedin.com/company/9328519?trk=tyah&amp;trkInfo=clickedVertical%3Acompany%2Cidx%3A2-1-2%2CtarId%3A1430748492894%2Ctas%3Afive%20insurance" translate>Retrouvez-nous sur LinkedIn</a></li>
+            </ul>
+        </nav>
+        <section class="contact-information" itemtype="http://microformats.org/profile/hcard" itemscope="">
+            <span class="five" itemprop="fn">Five</span>
+            <p>
+                <span itemprop="street-address">486, Chaussée de Marche</span><br>
+                <span itemprop="postal-code">B-5101</span>
+                <span itemprop="locality">Erpent</span>
+            </p>
+            <p>T. <span itemprop="tel">+32 81 84 15 20</span></p>
+            <p>F. +32 81 84 15 29</p>
+            <p>E. <span itemprop="email">info@five-insurance.be</span></p>
+        </section>
+    </div>
+</div>
