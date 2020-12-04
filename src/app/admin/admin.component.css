@@ -364,3 +364,8 @@
     background-color: #3c3c3c;
     color: #fff;
 }
+.page-item.active .page-link{
+    background-color: black;
+    color: white;
+    border-color: black;
+}

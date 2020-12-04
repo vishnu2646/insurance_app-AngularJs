@@ -145,7 +145,7 @@
                                 <i class="fa fa-download"></i> &nbsp; Documents
                             </td>
                         </tr>
-                        <tr *ngIf="row" data-toggle="collapse" data-target="#demo1" data-parent="#myTable">
+                        <tr *ngIf="row" >
                             <td></td>
                             <td>PERMMERS</td>
                             <td>Oliver</td>
@@ -155,8 +155,9 @@
                             <td>RC</td>
                             <td>09/06/2000</td>
                             <td>Proposition</td>
+                            <td><button type="submit" class="btn" style="background-color:#c4d500;" data-toggle="collapse" data-target="#demo" data-parent="#myTable">Details</button></td>
                         </tr>
-                        <tr id="demo1" class="collapse" style="background-color: white;color:black;border-color: 1px solid gray;">
+                        <tr id="demo" class="collapse" style="background-color: white;color:black;border-color: 1px solid gray;">
                             <td colspan="11" class="hiddenRow">
                                 <div class="container">
                                     <h3>PERMMERS Oliver</h3>
@@ -205,7 +206,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr *ngIf="row" data-toggle="collapse" data-target="#demo2" data-parent="#myTable">
+                        <tr *ngIf="row" data-toggle="collapse" data-target="#demo1" data-parent="#myTable" >
                             <td></td>
                             <td>PERMMERS</td>
                             <td>Oliver</td>
@@ -215,8 +216,10 @@
                             <td>RC</td>
                             <td>09/06/2000</td>
                             <td>Proposition</td>
+                            <td><button type="submit" class="btn" style="background-color:#c4d500;" data-toggle="collapse" data-target="#demo1" data-parent="#myTable">Details</button></td>
+                            
                         </tr>
-                        <tr id="demo2" class="collapse" style="background-color: white;color:black;border-color: 1px solid gray;">
+                        <tr id="demo1" class="collapse" style="background-color: white;color:black;border-color: 1px solid gray;">
                             <td colspan="11" class="hiddenRow">
                                 <div class="container">
                                     <h3>PERMMERS Oliver</h3>
@@ -399,9 +402,9 @@
                             <td>PESTIAUX</td>
                             <td>Louka</td>
                             <td>09/06/2000</td>
-                            <td><button type="submit" class="btn" data-toggle="collapse" data-target="#demo1" data-parent="#myTable">Detail</button></td>
+                            <td><button type="submit" class="btn" data-toggle="collapse" data-target="#demo2" data-parent="#myTable">Detail</button></td>
                         </tr>
-                        <tr id="demo1" class="collapse" style="background-color: white;color: black;border-color: 1px solid gray;">
+                        <tr id="demo2" class="collapse" style="background-color: white;color: black;border-color: 1px solid gray;">
                             <td colspan="11" class="hiddenRow">
                                 <div>
                                     <div class="container">
@@ -436,9 +439,9 @@
                             <td>PESTIAUX</td>
                             <td>Louka</td>
                             <td>09/06/2000</td>
-                            <td><button type="submit" class="btn" data-toggle="collapse" data-target="#demo2" data-parent="#myTable">Detail</button></td>
+                            <td><button type="submit" class="btn" data-toggle="collapse" data-target="#demo3" data-parent="#myTable">Detail</button></td>
                         </tr>
-                        <tr id="demo2" class="collapse" style="background-color: white;color: black;border-color: 1px solid gray;">
+                        <tr id="demo3" class="collapse" style="background-color: white;color: black;border-color: 1px solid gray;">
                             <td colspan="11" class="hiddenRow">
                                 <div>
                                     <div class="container">
@@ -536,11 +539,11 @@
                             <td>PESTIAUX</td>
                             <td>Louka</td>
                             <td>09/06/2000</td>
-                            <td><button type="submit" class="btn" style="background-color:#c4d500;" data-toggle="collapse" data-target="#demo1" data-parent="#myTable">Detail</button></td>
+                            <td><button type="submit" class="btn" style="background-color:#c4d500;" data-toggle="collapse" data-target="#demo4" data-parent="#myTable">Detail</button></td>
                             <td></td>
                             <td></td>
                         </tr>
-                        <tr id="demo1" class="collapse" style="background-color:white;color:black;border-color:1px solid #ddd;">
+                        <tr id="demo4" class="collapse" style="background-color:white;color:black;border-color:1px solid #ddd;">
                             <td colspan="11" class="hiddenRow">
                                 <div>
                                     <div class="container">
@@ -581,11 +584,11 @@
                             <td>PESTIAUX</td>
                             <td>Louka</td>
                             <td>09/06/2000</td>
-                            <td><button type="submit" class="btn" style="background-color:#c4d500;" data-toggle="collapse" data-target="#demo2" data-parent="#myTable">Detail</button></td>
+                            <td><button type="submit" class="btn" style="background-color:#c4d500;" data-toggle="collapse" data-target="#demo5" data-parent="#myTable">Detail</button></td>
                             <td></td>
                             <td></td>
                         </tr>
-                        <tr id="demo2" class="collapse" style="background-color:white;color:black;border-color:1px solid #ddd;">
+                        <tr id="demo5" class="collapse" style="background-color:white;color:black;border-color:1px solid #ddd;">
                             <td colspan="11" class="hiddenRow">
                                 <div>
                                     <div class="container">
